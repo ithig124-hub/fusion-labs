@@ -14,7 +14,7 @@ const BOARD_CONFIG = {
     displayName: '1.8" AMOLED',
     resolution: '368 × 448',
     displayDriver: 'SH8601',
-    firmwarePath: '/firmware/widget-os/180A/',
+    firmwarePath: '/fusion-labs/firmware/widget-os/180A/',
     accentColor: 'blue'
   },
   '2.06': {
@@ -22,7 +22,7 @@ const BOARD_CONFIG = {
     displayName: '2.06" AMOLED',
     resolution: '410 × 502',
     displayDriver: 'CO5300',
-    firmwarePath: '/firmware/widget-os/206A/',
+    firmwarePath: '/fusion-labs/firmware/widget-os/206A/',
     accentColor: 'purple'
   }
 };
