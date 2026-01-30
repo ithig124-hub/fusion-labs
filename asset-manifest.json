@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fusion-labs/static/css/main.22155e38.css",
-    "main.js": "/fusion-labs/static/js/main.a267b3d4.js",
+    "main.js": "/fusion-labs/static/js/main.05f843f5.js",
     "static/js/338.e7f2ab8d.chunk.js": "/fusion-labs/static/js/338.e7f2ab8d.chunk.js",
     "static/js/835.98fbf5b0.chunk.js": "/fusion-labs/static/js/835.98fbf5b0.chunk.js",
     "static/js/564.c32449ae.chunk.js": "/fusion-labs/static/js/564.c32449ae.chunk.js",
@@ -26,7 +26,7 @@
     "static/js/535.b87c3c1f.chunk.js": "/fusion-labs/static/js/535.b87c3c1f.chunk.js",
     "index.html": "/fusion-labs/index.html",
     "main.22155e38.css.map": "/fusion-labs/static/css/main.22155e38.css.map",
-    "main.a267b3d4.js.map": "/fusion-labs/static/js/main.a267b3d4.js.map",
+    "main.05f843f5.js.map": "/fusion-labs/static/js/main.05f843f5.js.map",
     "338.e7f2ab8d.chunk.js.map": "/fusion-labs/static/js/338.e7f2ab8d.chunk.js.map",
     "835.98fbf5b0.chunk.js.map": "/fusion-labs/static/js/835.98fbf5b0.chunk.js.map",
     "564.c32449ae.chunk.js.map": "/fusion-labs/static/js/564.c32449ae.chunk.js.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.22155e38.css",
-    "static/js/main.a267b3d4.js"
+    "static/js/main.05f843f5.js"
   ]
 }
