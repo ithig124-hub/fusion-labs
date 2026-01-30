@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Cpu, Wifi, Battery, HardDrive, Monitor, Thermometer, Download, BookOpen, FolderTree, CloudSun, TrendingUp, DollarSign, Clock, Compass, Flashlight, Gamepad2, Music, Image, Gauge, Shield } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Cpu, Wifi, Battery, HardDrive, Monitor, Thermometer, Download, BookOpen, FolderTree, CloudSun, TrendingUp, DollarSign, Clock, Compass, Flashlight, Gamepad2, Music, Image, Gauge, Shield, Heart, Star, Rocket, Users, Code, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const WidgetOSPage = () => {
@@ -53,6 +53,15 @@ export const WidgetOSPage = () => {
     { icon: Shield, name: 'System', desc: 'Device info' },
   ];
 
+  const acknowledgments = [
+    { name: 'LVGL Team', desc: 'For their incredible graphics engine' },
+    { name: 'Espressif', desc: 'For the versatile ESP32-S3 chip' },
+    { name: 'Waveshare', desc: 'For beautiful AMOLED hardware' },
+    { name: 'Emergent', desc: 'For the endless code debugging' },
+    { name: 'My Little Sister', desc: 'For inspiring Widget OS' },
+    { name: 'Open Source Communities', desc: 'For ongoing inspiration and support' },
+  ];
+
   return (
     <div className="min-h-screen bg-[#050505] text-white">
       {/* Header */}
@@ -73,15 +82,15 @@ export const WidgetOSPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="inline-block px-3 py-1 text-xs font-mono bg-blue-500/20 text-blue-400 rounded-full mb-6">STABLE RELEASE</span>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-mono mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-mono mb-4">
               Widget <span className="text-blue-500">OS</span>
             </h1>
-            <p className="text-xl text-zinc-400 leading-relaxed mb-4">
-              A productivity-focused smartwatch operating system. Clean interface, essential features, 
-              reliable performance. Built for daily use.
+            <p className="text-2xl text-zinc-300 font-medium mb-4">
+              Your Favourite Widgets, Now On Your Wrists
             </p>
-            <p className="text-zinc-500 mb-8">
-              ESP32-S3 powered • AMOLED display • WiFi connected • SD card storage
+            <p className="text-lg text-zinc-500 leading-relaxed mb-8">
+              A productivity-focused smartwatch operating system. Clean interface, essential features, 
+              reliable performance. Built for daily use. ESP32-S3 powered • AMOLED display • WiFi connected
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#update" className="inline-block">
@@ -93,7 +102,7 @@ export const WidgetOSPage = () => {
                   Update Firmware
                 </Button>
               </a>
-              <a href="/docs/widget-os/README.md" target="_blank" className="inline-block">
+              <a href="/fusion-labs/docs/WIDGET_OS_README.md" target="_blank" className="inline-block">
                 <Button 
                   data-testid="full-docs-btn"
                   variant="outline"
@@ -103,6 +112,38 @@ export const WidgetOSPage = () => {
                   Full Documentation
                 </Button>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Kickstarter Support */}
+      <section className="py-16 border-b border-white/5 bg-gradient-to-r from-emerald-500/5 via-emerald-500/10 to-emerald-500/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <Heart className="w-8 h-8 text-emerald-500" />
+                <h2 className="text-2xl font-bold font-mono">Support Widget OS on Kickstarter</h2>
+                <Rocket className="w-6 h-6 text-emerald-400" />
+              </div>
+              <p className="text-zinc-400 leading-relaxed mb-4">
+                Help bring Widget OS to wider audiences and add exciting new features! Early backers receive 
+                exclusive rewards like early access, dev kits, limited edition watches, and feature voting power.
+              </p>
+              <p className="text-zinc-500 text-sm">
+                <strong className="text-zinc-300">End Goal:</strong> Setup an online store and sell technology starting with Widget and Fusion OS
+              </p>
+            </div>
+            <div>
+              <Button 
+                data-testid="kickstarter-btn"
+                className="h-14 px-10 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-lg transition-all hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.5)]"
+              >
+                <Heart className="w-5 h-5 mr-2" />
+                Coming Soon
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </Button>
             </div>
           </div>
         </div>
@@ -262,10 +303,15 @@ export const WidgetOSPage = () => {
           <h2 className="text-3xl font-bold tracking-tight font-mono mb-4">
             Firmware <span className="text-blue-500">Update</span>
           </h2>
-          <p className="text-zinc-400 mb-12 max-w-2xl">
+          <p className="text-zinc-400 mb-8 max-w-2xl">
             Select your board size to access the web-based firmware updater. 
             Connect via USB and update directly in Chrome or Edge browser.
           </p>
+          <a href="/fusion-labs/docs/FIRMWARE_UPDATE_PROTOCOL.md" target="_blank" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm mb-8">
+            <Code className="w-4 h-4" />
+            View Firmware Update Protocol Documentation
+            <ExternalLink className="w-3 h-3" />
+          </a>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* 1.8" Updater Link */}
@@ -301,8 +347,34 @@ export const WidgetOSPage = () => {
         </div>
       </section>
 
-      {/* User Manual */}
-      <section id="manual" className="py-24">
+      {/* Future Implementation */}
+      <section className="py-24 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight font-mono mb-4">
+            <Star className="w-8 h-8 inline mr-3 text-blue-500" />
+            Future <span className="text-blue-500">Implementation</span>
+          </h2>
+          <p className="text-zinc-500 text-sm mb-8">(In Development)</p>
+          
+          <div className="prose prose-invert max-w-none">
+            <p className="text-zinc-400 leading-relaxed mb-6">
+              This watch platform is designed to grow. Future updates will introduce additional watch faces, 
+              deeper customization options, and expanded system features without requiring new hardware.
+            </p>
+            <p className="text-zinc-400 leading-relaxed mb-6">
+              Screen protectors and case accessories are planned to improve durability and personalization. 
+              USB-based firmware updates ensure long-term support, performance improvements, and new features over time.
+            </p>
+            <p className="text-zinc-400 leading-relaxed">
+              As the platform matures, additional tools, utilities, and optional software enhancements 
+              may be released based on community feedback.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Start Guide */}
+      <section id="manual" className="py-24 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight font-mono mb-12">
             Quick Start <span className="text-blue-500">Guide</span>
@@ -340,29 +412,55 @@ GMT_OFFSET=8`}
                 </pre>
               </div>
             </div>
-
-            {/* Troubleshooting */}
-            <div className="lg:col-span-2">
-              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm font-mono">3</span>
-                Troubleshooting
-              </h3>
-              <div className="grid sm:grid-cols-2 gap-4 text-zinc-400">
-                <div className="p-4 rounded-lg bg-white/[0.02] border border-white/5">
-                  <p><strong className="text-white">Won't turn on?</strong> Charge for 30+ minutes, then try power button.</p>
-                </div>
-                <div className="p-4 rounded-lg bg-white/[0.02] border border-white/5">
-                  <p><strong className="text-white">WiFi not connecting?</strong> Check config.txt syntax. Use 2.4GHz networks only.</p>
-                </div>
-                <div className="p-4 rounded-lg bg-white/[0.02] border border-white/5">
-                  <p><strong className="text-white">SD card not detected?</strong> Format as FAT32, under 32GB recommended.</p>
-                </div>
-                <div className="p-4 rounded-lg bg-white/[0.02] border border-white/5">
-                  <p><strong className="text-white">Update failed?</strong> Ensure battery &gt;50%, use Chrome/Edge browser.</p>
-                </div>
-              </div>
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Acknowledgments */}
+      <section className="py-24 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight font-mono mb-4 flex items-center gap-3">
+            <span className="text-2xl">🙏</span>
+            Acknowledgments & <span className="text-red-500">Thanks</span>
+            <span className="text-2xl">❤️</span>
+          </h2>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+            {acknowledgments.map((ack, i) => (
+              <div key={i} className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                <h4 className="font-semibold text-white mb-1">{ack.name}</h4>
+                <p className="text-sm text-zinc-500">{ack.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Made With Love */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold font-mono mb-6 flex items-center justify-center gap-2">
+            <span>🎉</span> Made with <span className="text-red-500">❤️</span> by makers, for makers
+          </h2>
+          <p className="text-zinc-400 leading-relaxed max-w-3xl mx-auto mb-6">
+            Widget/Fusion OS isn't just software — it's a community-driven project turning your wrist 
+            into a smart, beautiful hub that fits your lifestyle and creativity. <strong className="text-white">Your wrist, your rules.</strong>
+          </p>
+          <p className="text-zinc-500 leading-relaxed max-w-3xl mx-auto mb-6">
+            Building this project alone has been a rewarding journey full of coding challenges, 
+            sensor calibrations, and endless tweaks, but the joy of seeing it all come together 
+            has been worth every late night.
+          </p>
+          <p className="text-zinc-400 leading-relaxed max-w-3xl mx-auto mb-8">
+            This smartwatch project is my way of showing that with dedication and creativity, 
+            even a <strong className="text-blue-400">single high school student</strong> can build something impactful and inspiring.
+          </p>
+          <p className="text-zinc-300 font-medium">
+            Join me in this adventure—where your watch is not just a gadget, but a world waiting to be explored.
+          </p>
+          <p className="text-zinc-500 mt-4 text-sm">
+            Any feedback and suggestions are highly welcome. :)
+          </p>
         </div>
       </section>
 
