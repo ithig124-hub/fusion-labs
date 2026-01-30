@@ -7,6 +7,7 @@ import HomePage from "@/pages/HomePage";
 import WidgetOSPage from "@/pages/WidgetOSPage";
 import FusionOSPage from "@/pages/FusionOSPage";
 import UpdaterPage from "@/pages/UpdaterPage";
+import WifiConfigPage from "@/pages/WifiConfigPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/widget-os" element={<WidgetOSPage />} />
           <Route path="/widget-os/:boardSize" element={<UpdaterPage />} />
+          <Route path="/widget-os/wifi-config" element={<WifiConfigPage />} />
           <Route path="/fusion-os" element={<FusionOSPage />} />
         </Routes>
       </BrowserRouter>
