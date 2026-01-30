@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "build": "stable",
+  "board": "WOS-180A",
+  "boardName": "1.8\" AMOLED (368x448)",
+  "bin": "S3_MiniOS.bin",
+  "checksum": "placeholder",
+  "releaseDate": "2025-01-01",
+  "notes": "Initial stable release of Widget OS for 1.8 inch display"
+}

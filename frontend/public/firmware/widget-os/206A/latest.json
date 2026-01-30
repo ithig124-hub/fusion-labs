@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "build": "stable",
+  "board": "WOS-206A",
+  "boardName": "2.06\" AMOLED (410x502)",
+  "bin": "S3_MiniOS_206.bin",
+  "checksum": "placeholder",
+  "releaseDate": "2025-01-01",
+  "notes": "Initial stable release of Widget OS for 2.06 inch display"
+}
