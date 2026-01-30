@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Cpu, Wifi, Battery, HardDrive, Monitor, Thermometer, Download, BookOpen, FolderTree, CloudSun, TrendingUp, DollarSign, Clock, Compass, Flashlight, Gamepad2, Music, Image, Gauge, Shield, Heart, Star, Rocket, Users, Code, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Cpu, Wifi, Battery, HardDrive, Monitor, Thermometer, Download, BookOpen, FolderTree, CloudSun, TrendingUp, DollarSign, Clock, Compass, Flashlight, Gamepad2, Music, Image, Gauge, Shield, Heart, Star, Rocket, Users, Code, ExternalLink, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const WidgetOSPage = () => {
