@@ -4,52 +4,74 @@
 Build a comprehensive website for Fusion Labs ESP32-S3 smartwatch firmware updates with:
 - Multi-page structure (Home, Widget OS, Fusion OS, Updaters)
 - WebSerial-based firmware flashing for 1.8" and 2.06" AMOLED watches
-- User manual content, specs, and future features roadmap
-- Social links (GitHub, YouTube), placeholders for Kickstarter/Store
+- Rich documentation from INO files
+- Interactive Fusion OS simulator with character themes
+- Organized file structure for docs and firmware
 
 ## User Personas
 - **Kickstarter Backers**: Need easy firmware updates, clear instructions
 - **DIY Electronics Enthusiasts**: Want technical specs, open-source access
 - **First-time Users**: Require step-by-step guidance
 
-## Core Requirements
-- [x] Home page with Fusion Labs branding
-- [x] Widget OS page with full specs & user manual
-- [x] Fusion OS teaser (coming soon)
-- [x] Firmware updater pages for 1.8" (WOS-180A) and 2.06" (WOS-206A)
-- [x] WebSerial integration via esptool-js
-- [x] GitHub: https://github.com/ithig124-hub
-- [x] YouTube: https://www.youtube.com/@IthiDezNuts
-
 ## What's Been Implemented (Jan 30, 2025)
 
-### Pages
+### Pages & Features
 | Route | Description | Status |
 |-------|-------------|--------|
 | `/` | Home - Hero, features, OS selection, future roadmap | ✅ |
-| `/widget-os` | Widget OS - Specs, features, manual, updater links | ✅ |
-| `/fusion-os` | Fusion OS teaser with notify form | ✅ |
+| `/widget-os` | Widget OS - Full specs, features, apps, SD structure, manual | ✅ |
+| `/fusion-os` | Fusion OS - Interactive simulator, 3 character themes, dev status | ✅ |
 | `/widget-os/1.8` | 1.8" updater (WOS-180A, 368×448, SH8601) | ✅ |
 | `/widget-os/2.06` | 2.06" updater (WOS-206A, 410×502, CO5300) | ✅ |
 
-### Technical
-- ESPToolService with WebSerial for ESP32-S3 flashing
-- Board validation (WOS-180A / WOS-206A)
-- Progress tracking, console logging
-- Dark cyber-industrial UI theme
-- JetBrains Mono + Inter typography
-- Sonner toast notifications
+### Widget OS Page Content
+- Hardware specs for both board sizes
+- Core features (6 items with icons)
+- Internet features (Weather, Stocks, Currency with APIs)
+- Built-in apps grid (8 apps)
+- SD Card folder structure diagram
+- Quick start guide with WiFi config
+- Troubleshooting section
 
-### Firmware Structure
+### Fusion OS Page Content
+- **Interactive Watch Simulator**:
+  - Real-time clock display
+  - 3 character themes (Luffy, Jin-Woo, Yugo)
+  - Theme switching buttons
+  - App menu toggle
+  - Level, XP, health stats
+- Character progression paths
+- RPG features section
+- Development status progress bars
+- GitHub link to source code
+
+### File Organization
 ```
-/public/firmware/widget-os/
-├── 180A/
-│   ├── latest.json
-│   └── S3_MiniOS.bin (placeholder)
-└── 206A/
-    ├── latest.json
-    └── S3_MiniOS_206.bin (placeholder)
+/public/
+├── docs/
+│   ├── widget-os/README.md    # Complete Widget OS documentation
+│   └── fusion-os/README.md    # Fusion OS overview
+└── firmware/
+    └── widget-os/
+        ├── 180A/
+        │   ├── latest.json
+        │   └── S3_MiniOS.bin (placeholder)
+        └── 206A/
+            ├── latest.json
+            └── S3_MiniOS_206.bin (placeholder)
 ```
+
+### Technical Stack
+- React + React Router
+- Tailwind CSS + Shadcn UI
+- esptool-js for WebSerial flashing
+- Sonner for toast notifications
+- LVGL-style watch simulator
+
+## External Links
+- GitHub: https://github.com/ithig124-hub
+- YouTube: https://www.youtube.com/@IthiDezNuts
+- Fusion OS Source: https://github.com/ithig124-hub/ESP32_Watch
 
 ## Backlog
 
@@ -59,19 +81,14 @@ Build a comprehensive website for Fusion Labs ESP32-S3 smartwatch firmware updat
 ### P1 (High Priority)
 - [ ] Watch face store/gallery
 - [ ] Screen protector product page
-- [ ] USB mass storage file upload documentation
+- [ ] USB mass storage documentation
 
 ### P2 (Medium)
-- [ ] Mobile companion app info
-- [ ] Developer SDK documentation
-- [ ] Multi-language support
-
-### P3 (Future)
 - [ ] Kickstarter campaign integration
 - [ ] E-commerce store
 - [ ] Community forum
 
 ## Notes
-- Firmware .bin files are placeholders - need compiled versions from Arduino IDE
-- WebSerial requires Chrome/Edge and actual ESP32 hardware to test flashing
-- Email notify on Fusion OS page is UI-only (no backend storage)
+- Firmware .bin files are PLACEHOLDERS - need compiled versions from Arduino IDE
+- WebSerial requires Chrome/Edge and actual ESP32 hardware
+- Watch simulator is UI demo only - shows theme concept
