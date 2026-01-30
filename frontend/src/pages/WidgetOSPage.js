@@ -318,6 +318,11 @@ export const WidgetOSPage = () => {
               WiFi Configuration Tool
               <ArrowRight className="w-3 h-3" />
             </Link>
+            <Link to="/widget-os/faces" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 text-sm" data-testid="watch-faces-link">
+              <Monitor className="w-4 h-4" />
+              Watch Face Library
+              <ArrowRight className="w-3 h-3" />
+            </Link>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
