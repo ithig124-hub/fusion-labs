@@ -2,7 +2,7 @@
   "name": "fusion-labs",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://YOUR_USERNAME.github.io/fusion-labs",
+  "homepage": "https://ithig124-hub.github.io/fusion-labs",
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-accordion": "^1.2.8",
