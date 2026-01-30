@@ -307,11 +307,18 @@ export const WidgetOSPage = () => {
             Select your board size to access the web-based firmware updater. 
             Connect via USB and update directly in Chrome or Edge browser.
           </p>
-          <a href="/fusion-labs/docs/FIRMWARE_UPDATE_PROTOCOL.md" target="_blank" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm mb-8">
-            <Code className="w-4 h-4" />
-            View Firmware Update Protocol Documentation
-            <ExternalLink className="w-3 h-3" />
-          </a>
+          <div className="flex flex-wrap gap-4 mb-8">
+            <a href="/fusion-labs/docs/FIRMWARE_UPDATE_PROTOCOL.md" target="_blank" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+              <Code className="w-4 h-4" />
+              Firmware Update Protocol
+              <ExternalLink className="w-3 h-3" />
+            </a>
+            <Link to="/widget-os/wifi-config" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 text-sm" data-testid="wifi-config-link">
+              <Settings className="w-4 h-4" />
+              WiFi Configuration Tool
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* 1.8" Updater Link */}
